@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import serviceDetails from "./serviceDetData";
-import JustHeader from "./justHeader";
+import JustHeader from "./JustHeader";
 import Footer from "./Footer";
 import './styles/ServiceDet.css'
 
