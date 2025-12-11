@@ -1,0 +1,28 @@
+.spinner-overlay {
+  position: fixed;       /* ensure it covers the whole viewport */
+  top: 0;
+  left: 0;
+  inset: 0;
+  width: 100vw;          /* full width */
+  height: 100vh;         /* full height */
+  background: rgba(21, 21, 23, 0.85); /* subtle dark overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  z-index: 9999;         /* stay on top */
+}
+
+.slim-spinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0, 150, 255, 0.2); /* thin track */
+  border-top-color: #0096ff;                /* highlighted arc */
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

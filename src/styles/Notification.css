@@ -1,0 +1,89 @@
+.navigatee {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+
+.notification-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.8rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+
+.initialss {
+  background-color: rgba(21, 27, 40, 0.256);
+  padding: 0.9rem 1.4rem;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+
+.msg {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.msg-type {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.msg-msg {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(205, 199, 199);
+  font-family: 'Inter';
+}
+
+
+.message-detail-container {
+  max-width: 450px;   /* perfect mobile size */
+  margin: 0 auto;
+  background: linear-gradient(135deg, #151b24, #121724);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.message-container {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.8rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+
+.det-type {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.msg {
+  font-weight: 600;
+  color: rgb(218, 211, 211);
+  font-size: 0.8rem;
+}
+

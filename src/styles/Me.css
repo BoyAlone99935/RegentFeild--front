@@ -1,0 +1,147 @@
+.me-container {
+  max-width: 420px;   /* perfect mobile size */
+  background: linear-gradient(135deg, #151b24, #121724);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+
+.me-container img {
+  width: 40px;
+  border-radius: 10px;
+  margin-bottom: 0.4rem;
+  height: 43px;
+}
+
+
+.Title {
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+
+.Titless {
+  font-weight: bolder;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+
+.pic {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.6rem;
+}
+
+.pic span {
+  font-weight: bold;
+
+}
+
+
+.personal-Info-cont {
+  background: rgba(255, 255, 255, 0.036);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.personal-Info-cont button {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgb(236, 167, 5);
+  border: none;
+  background: transparent;
+  font-family: 'Poppins' , sans-serif;
+}
+
+.personal-Info-cont button:active {
+  background-color: rgb(236, 167, 5);
+  color: white;
+  border-radius: 7px;
+}
+
+.personal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.personal-item:last-child {
+  border-bottom: none;
+}
+
+.personal-item span {
+  margin: 0;
+}
+
+.to {
+  font-weight: bolder;
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.ans {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.verify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Verified {
+  background: rgba(0, 200, 0, 0.18);
+  color: #32ff32;
+  padding: 0.4rem  0.7rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.action-cont {
+ background: rgba(255, 255, 255, 0.036);
+ padding: 1rem;
+ border-radius: 10px;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+
+.action div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  
+}
+
+.action div svg {
+  background-color: #151b24;
+  padding: 0.8rem;
+  color: rgb(236, 167, 5);
+  border-radius: 7px;
+}
+
+
+.action div span {
+  font-size: 0.85rem;
+}

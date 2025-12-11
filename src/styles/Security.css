@@ -1,0 +1,243 @@
+.setting-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+.setting-content {  
+  align-items: center;
+  gap: 2rem;
+}
+
+.setting-text h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.setting-text p {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.btn-primary {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+  font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: #5848d9;
+}
+
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #888;
+}
+
+.input-wrapper input {
+  padding: 0.6rem 0.8rem 0.6rem 2.5rem ; /* extra left padding for icon */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+  font-family: 'Poppins';
+
+}
+
+
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  padding: 8px;
+  margin-top: 6px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+  z-index: 10;
+  width: 200px;
+}
+
+.select button {
+  border-radius: 6px;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: 'Poppins';
+  border: none;
+  background-color: #f3f3f3;
+}
+
+
+.select button:hover {
+  background-color: whitesmoke;
+}
+
+
+.spinner {
+  border: 3px solid #f3f3f3; /* light grey */
+  border-top: 3px solid #6c63ff; /* your theme color */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.success-text {
+  color: green;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+
+.setting-card.disabled {
+  opacity: 0.6;
+  pointer-events: none; /* makes it clear it’s inactive */
+}
+
+.btn-disabled {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #e5e7eb; /* light gray */
+  color: #6b7280;      /* darker gray text */
+  cursor: not-allowed;
+  font-family: 'Poppins';
+}
+
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+
+.danger-zone {
+  border: 1px solid #ff4d4f;
+  background: #fff5f5;
+  margin-top: 1rem;
+}
+
+.btn-danger {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-danger:hover {
+  background-color: #e04344;
+}
+
+.confirm-delete {
+  margin-top: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+
+
+.delete-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Modal container */
+.delete-modal {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Modal actions (buttons) */
+.delete-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.btn-danger {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-danger:hover {
+  background: #c62828;
+}
+
+.btn-secondary:hover {
+  background: #ddd;
+}
+
+

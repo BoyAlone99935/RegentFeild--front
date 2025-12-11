@@ -1,0 +1,63 @@
+.user-details-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 100vh;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.icon-box {
+  width: 42px;
+  height: 42px;
+  background: rgba(108, 63, 201, 0.1); /* soft purple */
+  color: #6c3fc9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.value.highlight {
+  color: #6c3fc9;
+}
+
+.value.code {
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: #444;
+  background: #f6f6f6;
+  padding: 2px 6px;
+  border-radius: 6px;
+}

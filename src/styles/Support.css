@@ -1,0 +1,82 @@
+.support-container {
+  max-width: 420px;   /* perfect mobile size */
+  background: linear-gradient(135deg, #151b24, #121724);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+
+.chat {
+  background: rgba(255, 255, 255, 0.036);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.timeFrame {
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.2rem  0.5rem;
+  border-radius: 7px;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.per {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.per p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.per span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.per svg {
+  background-color: #222934;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.email {
+  background: rgba(255, 255, 255, 0.036);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.email div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.email div span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+.email div button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgb(236, 167, 5);
+  font-weight: 500;
+  background: rgba(255, 180, 0, 0.22);
+  border: none;
+  padding: 0.4rem  0.6rem;
+  border-radius: 5px;
+}

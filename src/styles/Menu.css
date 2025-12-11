@@ -1,0 +1,130 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.menu_cont {
+  background-color: white;
+  margin: 1rem;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1001;
+  overflow-x: scroll;
+}
+
+
+.getStarted {
+  background: linear-gradient(135deg, #1e293b, #161e36);
+  color: white;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif
+}
+
+.logo {
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.login {
+  background: linear-gradient(135deg, #1e293b, #161e36);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif
+}
+
+
+.login:active {
+  transform: scale(0.98);
+}
+
+.signup {
+  background: none;
+  color: #1e293b;
+  border: 2px solid #1e293b;
+  padding: 10px 15px;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif
+}
+
+.signup:active {
+  transform: scale(0.98);
+}
+
+.authButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.links {
+ margin-top: 1.5rem;
+}
+
+
+.links p {
+ border-top: 1px solid #e2e8f0;
+ padding: 0.5rem;
+ text-decoration: dotted;
+}
+
+
+.newsLetter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: black;
+}
+
+.newsLetter input {
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsLetter button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif
+}
+
+
+
+
+.dropdown-cc {   
+  max-height: 70vh; 
+  background: #fff;   /* <— limits height */
+  overflow-y: scroll;        /* <— enables vertical scroll */
+  border-bottom: 1px solid #ddd;
+  z-index: 50;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+

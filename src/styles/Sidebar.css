@@ -1,0 +1,100 @@
+
+.sidebar {
+  height: 100vh;
+  background: #111827; /* dark slate */
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  gap: 2rem;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  
+}
+
+
+:root {
+  --accent: #8e44ad; /* Purple (change if you prefer blue/teal/etc) */
+}
+
+.sidebar.collapsed {
+  width: 64px; /* icons only */
+}
+
+.sidebar.expanded {
+  width: 220px; /* icons + text */
+}
+
+
+
+.toggle-btn {
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+
+
+.menu {
+  margin-top: 20px;
+  flex: 1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  transition: border-right 0.6s ease-out;
+}
+
+.menu-item.active {
+  border-right: 4px solid var(--accent);
+}
+
+.menu-item:hover {
+  color: #754a87;
+}
+
+
+
+.label {
+  font-size: 14px;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.menu-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.menu-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(108, 63, 201, 0.1); /* soft purple */
+  color: #6c3fc9;
+}
+
+
+.menu-item.active {
+  background: rgba(167, 194, 217, 0.1);
+  font-weight: 600;
+}

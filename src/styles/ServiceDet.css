@@ -1,0 +1,161 @@
+
+.services-detail {
+  font-family: 'Poppins';
+  color: #1a1a1a;
+  line-height: 1.6;
+  background: #f9fafa;
+}
+
+
+.service-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+}
+
+.service-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.service-hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+
+}
+
+.service-hero-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.service-hero-overview {
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+
+.service-content {
+  padding: 0 2rem;
+}
+
+.service-content > div > p:first-child {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0a2540;
+  margin-bottom: 1rem;
+}
+
+.service-content > div > p:last-child {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+
+.service-section {
+  margin-bottom: 3rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease;
+}
+
+.service-section:hover {
+  transform: translateY(-4px);
+}
+
+.service-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #0a2540;
+  border-left: 4px solid #0077ff;
+  padding-left: 1rem;
+}
+
+.service-section-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-point {
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  color: #333;
+}
+
+
+.bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 12px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: #0077ff;
+  flex-shrink: 0;
+}
+
+  
+
+  
+
+@media (max-width: 768px) {
+  .service-hero {
+    height: 50vh;
+    
+  }
+
+  .service-hero-overlay {
+    width: 400px;
+  }
+
+  .service-hero-title {
+    font-size: 1rem;
+  }
+
+  .service-hero-overview {
+    font-size: 1rem;
+  }
+
+  .service-section {
+    padding: 1.5rem;
+  
+  }
+
+  .service-content {
+    padding: 1rem;
+  }
+
+  .service-content > div > p:first-child {
+  font-size: 1.5rem;
+
+}
+@media (max-width: 450px) {
+    .service-hero-overlay {
+      width: 340px;
+    }
+  }
+
+  
+}
+
