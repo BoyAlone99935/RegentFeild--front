@@ -58,7 +58,9 @@ function DashHome() {
 
         <div className='amount'>
          {
-          open ?  <span className='amount-text'>${user ? balance.toLocaleString() : 'loading...'}{user && '.00'}</span> : <span className='amount-text'>*****</span>
+          open && <span className='amount-text'>
+            ${user ? `${user.AccountBalance.toLocaleString()}.00` : 'loading...'}
+          </span>
          }
          {
           open ? <EyeOff size={15} className='icon-btn' onClick={() => setOpen(!open)}/>   :   <Eye size={15} className='icon-btn' onClick={() => setOpen(!open)}/>
