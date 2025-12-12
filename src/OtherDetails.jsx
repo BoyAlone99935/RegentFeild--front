@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { FiPhone, FiCalendar, FiHome, FiShield, FiCamera } from "react-icons/fi";
-import "./styles/OtherDetails.css";
+import "./styles/otherDetails.css";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import Spinner from "./Spinner";
