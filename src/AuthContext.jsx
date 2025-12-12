@@ -68,13 +68,14 @@ useEffect(() => {
   fetchData();
 }, [token]);
 
-  useEffect(async () => {
+  useEffect(() => {
+  const fetchBeneficiaries = async () => {
     setLoading(true)
     try {
-      const res =  await axios.get('https://regent-feild.vercel.app/api/transfer/allBeneficiaries', {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
+      const res = await axios.get('https://regent-feild.vercel.app/api/transfer/allBeneficiaries', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
       })
       console.log(res.data)
       setBeneficiaries(res.data.AllBeneficiaries)
@@ -83,7 +84,9 @@ useEffect(() => {
       console.log(err)
       setLoading(false)
     }
-  } , [token])
+  }
+  fetchBeneficiaries()
+}, [token])
  
   
   const saveToken = (newToken) => {

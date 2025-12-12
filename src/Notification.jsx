@@ -19,8 +19,8 @@ function Notification() {
 }
   return (
     <div>
-     
-     <div className='notification-container'>
+    {
+      notifications.length ?  <div className='notification-container'>
        {
         notifications.map((notification) => (
           <div key={notification._id} className='notification' onClick={() => navigate('/notification-details' , {state : {data : notification}})}>
@@ -34,7 +34,8 @@ function Notification() {
           </div>
         ))
       }
-     </div>
+     </div> : <p style={{textAlign : 'center'}}>No notifications yet</p>
+    }
     </div>
   )
 }

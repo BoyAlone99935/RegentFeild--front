@@ -6,6 +6,7 @@ import bull from '../src/assets/bulls.png'
 import warning from './assets/warn.png'
 import { useAuth } from './AuthContext'
 import { formatDate1 } from './FormattDate'
+import Spinner from './Spinner'
 import {
   Settings,
   Copy,
@@ -32,7 +33,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 function DashHome() {
   const [tab , setTab] = useState("month")
-  const [open , setOpen] = useState(false)
+  const [open , setOpen] = useState(true)
   const [showCancelModal , setShowCancelModal ] = useState(false)
   const {user , notifications , transactions , balance} = useAuth()
   useEffect(() => {
@@ -45,10 +46,9 @@ function DashHome() {
  function truncate(text, max) {
   return text.length > max ? text.slice(0, max) + "..." : text;
 }
-
+  if (!user) return <Spinner />;
   return (
     <div>
-
       {/* BALANCE CARD */}
       <div className='balance'>
         <div className='details'>
@@ -58,7 +58,7 @@ function DashHome() {
 
         <div className='amount'>
          {
-          open ?  <span className='amount-text'>${balance.toLocaleString()}.00</span> : <span className='amount-text'>*****</span>
+          open ?  <span className='amount-text'>${user ? balance.toLocaleString() : 'loading...'}{user && '.00'}</span> : <span className='amount-text'>*****</span>
          }
          {
           open ? <EyeOff size={15} className='icon-btn' onClick={() => setOpen(!open)}/>   :   <Eye size={15} className='icon-btn' onClick={() => setOpen(!open)}/>
@@ -155,11 +155,14 @@ function DashHome() {
       </div>
      {/*RECENT TRANSACTIONS*/}
      <div>
-        <div className='recent-transactions-header'>
+        {
+          transactions.length > 0 && <div className='recent-transactions-header'>
           <p style={{marginBottom:'10px' , color:'grey'}}>Recent Transactions</p>
-          <span className='viewAll' style={{cursor : 'pointer'}} onClick={() => navigate('/transaction')}>View all</span>
+          <span className='viewAll' style={{cursor : 'pointer'}} onClick={() => navigate('/transaction')}>View all</span> 
         </div>
-        <div className="transaction-cont">
+        }
+       {
+        transactions.length > 0 &&  <div className="transaction-cont">
   {Array.isArray(transactions) && transactions.length > 0
     ? transactions.slice(0, 4).map((transaction, index) => {
         // extra safety in case a transaction is temporarily undefined
@@ -191,6 +194,7 @@ function DashHome() {
     )
   }
 </div>
+       }
   </div>
  <div>
    <p  style={{color : 'grey' , margin: '0px' , marginTop : '0.7rem'}}>Finance</p>

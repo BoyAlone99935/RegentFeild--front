@@ -18,7 +18,7 @@ function RecentTransactions() {
 }
   const navigate = useNavigate()
   return (
-    <div className="transactions-wrapper">
+      <div className="transactions-wrapper">
       <div className='tx-head'>
           <ArrowLeft size={17} onClick={() => (navigate(-1))}/>
           <p style={{fontWeight: '600'}}>Transactions</p>
@@ -76,7 +76,6 @@ function RecentTransactions() {
     ))}
 
     </div>
-
   )
 }
 
