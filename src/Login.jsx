@@ -10,12 +10,11 @@ export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const {saveToken} = useAuth()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
-  const {setUser} = useAuth()
+  const {setUser , saveToken} = useAuth()
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
