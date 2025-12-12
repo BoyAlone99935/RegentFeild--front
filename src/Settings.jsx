@@ -1,72 +1,77 @@
-import { ArrowLeft , ArrowRight, Bell, BellElectric, ChevronRight, EyeClosed, Lock, ShieldAlert, Trash2Icon } from "lucide-react"
-import { FaMobile } from "react-icons/fa"
-import './styles/Settings.css'
-
+import { ArrowLeft, ChevronRight, EyeClosed, Lock, ShieldAlert, Trash2Icon, Bell } from "lucide-react";
+import { FaMobile } from "react-icons/fa";
+import './styles/Settings.css';
 
 function Settings() {
   return (
-    <div className='settings-container'>
-      <div>
-        <ArrowLeft/>
-        <span>Settings</span>
-        <div></div>
-      </div>
-
-
-      <div>
-        <span>Security & Privacy</span>
-        <div>
-          <Lock/>
-          <span>Change Password</span>
-          <ChevronRight/>
+    <div className="mobile-wrapper">
+      <div className='settings-container'>
+        <div className="settings-header">
+          <ArrowLeft size={17}/>
+          <span>Settings</span>
+          <div></div>
         </div>
-
-        <div>
-          <Lock/>
-          <span>Reset User Pin</span>
-          <ChevronRight/>
+        <div className="settings-section">
+          <span className="others">Security & Privacy</span>
+          <div className="settings-item">
+            <div className="setting">
+              <Lock className="arrowLeft" />
+              <span>Change Password</span>
+            </div>
+            <ChevronRight className="arrowLeft"/>
+          </div>
+          <div className="settings-item">
+            <div className="setting">
+              <Lock className="arrowLeft" />
+              <span>Reset User Pin</span>
+            </div>
+            <ChevronRight className="arrowLeft"/>
+          </div>
+          <div className="settings-item">
+            <div className="setting">
+              <EyeClosed className="arrowLeft" />
+              <span>Hide Balance</span>
+            </div>
+            <ChevronRight className="arrowLeft"/>
+          </div>
         </div>
-
-
-        <div>
-          <EyeClosed/>
-          <span>Hide Balance</span>
-          <ChevronRight/>
+        <div className="settings-section">
+          <span className="others">App & Device</span>
+          <div className="settings-item">
+            <div className="setting">
+              <ShieldAlert className="arrowLeft" />
+              <span>Consent Request</span>
+            </div>
+            <ChevronRight className="arrowLeft"/>
+          </div>
+          <div className="settings-item">
+            <div className="setting">
+              <FaMobile className="arrowLeft" />
+              <span>Device Management</span>
+            </div>
+            <ChevronRight className="arrowLeft"/>
+          </div>
+          <div className="settings-item">
+            <div className="setting">
+              <Bell className="arrowLeft" />
+              <span>Notification Preference</span>
+            </div>
+            <ChevronRight className="arrowLeft"/>
+          </div>
         </div>
-      </div>
-    
-      <div>
-        <span>App & Device</span>
-        <div>
-          <ShieldAlert/>
-          <span>Consent Request</span>
-          <ChevronRight/>
-        </div>
-
-        <div>
-          <FaMobile/>
-          <span>Device Management</span>
-          <ChevronRight/>
-        </div>
-
-
-        <div>
-          <Bell/>
-          <span>Notification Prefrence</span>
-          <ChevronRight/>
-        </div>
-
-      </div>
-       <div>
-        <span>Others</span>
-        <div>
-          <Trash2Icon/>
-          <span>Delete Account</span>
-          <ChevronRight/>
+        <div className="settings-section">
+          <span className="others">Others</span>
+          <div className="settings-item">
+            <div className="setting">
+              <Trash2Icon color="red"  className="arrowLeft"/>
+              <span style={{color : 'red'}}>Delete Account</span>
+            </div>
+            <ChevronRight color="red"/>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Settings
+export default Settings;
