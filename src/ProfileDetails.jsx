@@ -57,7 +57,7 @@ function ProfileDetails() {
           <ChevronRight size={'15px'}  color='rgb(236, 167, 5)'/>
         </div>
          <div className='action'>
-          <div>
+          <div onClick={() => navigate('/settings')}>
             <Sliders size={'15px'}/>
             <span>Settings</span>
           </div>

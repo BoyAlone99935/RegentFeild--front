@@ -20,6 +20,7 @@ import Sucess from './Sucess'
 import RecentTransactions from './RecentTransactions'
 import TransactionDetails from './TransactionDetails'
 import NotificationDet from './NotificationDet'
+import Settings from './Settings'
 function App() {
  const [loading , setLoading] = useState(true)
  useEffect(() => {
@@ -53,6 +54,7 @@ function App() {
       <Route path ='/transaction' element = {<RecentTransactions/>}/>
       <Route path ='/transaction-details' element = {<TransactionDetails/>}/>
       <Route path ='/notification-details' element = {<NotificationDet/>}/>
+      <Route path ='/settings' element = {<Settings/>}/>
      </Routes>
      </>
      }
