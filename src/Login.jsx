@@ -10,6 +10,7 @@ export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const {saveToken} = useAuth()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -23,6 +24,7 @@ export default function Login() {
     try {
       const res = await axios.post("https://regent-feild.vercel.app/api/auth/login", form);
       localStorage.setItem('token' , res.data.token)
+      saveToken(response.data.token);
       setUser(res.data.user)
       // After login step 1, go to login-code page
       navigate("/login-code", { state: { email: form.email } });
