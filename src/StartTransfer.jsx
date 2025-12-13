@@ -32,6 +32,7 @@ import sync from './assets/sync.png'
 import ally from './assets/ally.webp'
 import barklays from './assets/barklays.png'
 import dutch from './assets/dutch.jpg'
+import { Smartphone } from 'lucide-react';
 function StartTransfer() {
   const {user , balance , beneficiaries} = useAuth()
   const navigate = useNavigate()
