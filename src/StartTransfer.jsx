@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/Transfer.css'
 import { useAuth } from './AuthContext'
-import { ArrowLeft,  ChevronRight, Landmark, Star } from 'lucide-react';
+import { ArrowLeft,  ChevronRight, Landmark, Star, TestTubeDiagonalIcon } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Spinner from './Spinner';
@@ -13,6 +13,16 @@ import usBank from './assets/us.png'
 import pnc from './assets/pnc.png'
 import scotia from './assets/scotia.png'
 import standard from './assets/standard.png'
+import citibank from './assets/citibank.jpg'
+import goldman from  './assets/Goldman.jpg'
+import morgan from './assets/Morgan.png'
+import capital from  './assets/capital.webp'
+import td from './assets/td.png'
+import BB from './assets/BB.jpg'
+import sunTrust from './assets/trust.png'
+import hsbc from './assets/hsbc.jpg'
+import fifth from 'assets/fifth.jpg'
+
 function StartTransfer() {
   const {user , balance , beneficiaries} = useAuth()
   const navigate = useNavigate()
@@ -55,54 +65,7 @@ function StartTransfer() {
     },3000)
   }
 
-  const beneficiary = [
-  {
-    name: "Michael Thompson",
-    bank: "Bank of America",
-    routingNumber: "026009593",
-    accountNumber: "987654310245",
-    accountType: "Savings",
-    favourite : false,
-    logo : America
-  },
-  {
-    name: "Sophia Martinez",
-    bank: "Wells Fargo",
-    routingNumber: "121000248",
-    accountNumber: "112349875320",
-    accountType: "Checking",
-    logo: wells,
-    favourite : true
-  },
-  {
-    name: "Christopher Adams",
-    bank: "Chase Bank",
-    routingNumber: "021000021",
-    accountNumber: "654398120934",
-    accountType: "Checking",
-    logo: chase,
-    favourite : false
-  },
-  {
-    name: "Ava Richardson",
-    bank: "Citibank",
-    routingNumber: "021000089",
-    accountNumber: "204873195682",
-    accountType: "Savings",
-    logo: "https://logo.clearbit.com/citi.com",
-    favourite : true
-  },
-  {
-    name: "Daniel Rivers",
-    bank: "TD Bank",
-    routingNumber: "031101266",
-    accountNumber: "743109582760",
-    accountType: "Checking",
-    logo: "https://logo.clearbit.com/td.com",
-    favourite : false
-  }
-];
-
+ 
 
 const banks = [
   { 
@@ -123,17 +86,17 @@ const banks = [
   { 
     name: "Citibank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/citi.com",
+    logo: citibank,
   },
   { 
     name: "Goldman Sachs", 
     country: "USA",
-    logo: "https://logo.clearbit.com/goldmansachs.com"
+    logo: goldman
   },
   { 
     name: "Morgan Stanley", 
     country: "USA",
-    logo: "https://logo.clearbit.com/morganstanley.com"
+    logo: morgan
   },
   { 
     name: "US Bank", 
@@ -148,37 +111,37 @@ const banks = [
   { 
     name: "Capital One", 
     country: "USA",
-    logo: "https://logo.clearbit.com/capitalone.com"
+    logo: capital
   },
   { 
     name: "TD Bank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/td.com"
+    logo: td
   },
   { 
     name: "BB&T (Truist)", 
     country: "USA",
-    logo: "https://logo.clearbit.com/truist.com"
+    logo: BB
   },
   { 
     name: "SunTrust Bank (Truist)", 
     country: "USA",
-    logo: "https://logo.clearbit.com/truist.com"
+    logo: sunTrust
   },
   { 
     name: "HSBC Bank USA", 
     country: "USA",
-    logo: "https://logo.clearbit.com/hsbc.com"
+    logo: hsbc
   },
   { 
     name: "Fifth Third Bank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/53.com"
+    logo: fifth
   },
   { 
     name: "Regions Bank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/regions.com"
+    logo: ""
   },
   { 
     name: "KeyBank", 
