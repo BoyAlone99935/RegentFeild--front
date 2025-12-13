@@ -21,8 +21,17 @@ import td from './assets/td.png'
 import BB from './assets/BB.jpg'
 import sunTrust from './assets/trust.png'
 import hsbc from './assets/hsbc.jpg'
-import fifth from 'assets/fifth.jpg'
-
+import fifth from './assets/fifth.jpg'
+import regions from './assets/Regions.webp'
+import key from './assets/key.svg'
+import citizens from './assets/citizens.png'
+import royal from './assets/royal.svg'
+import ing from './assets/ing.png'
+import mt from './assets/m&t.png'
+import sync from './assets/sync.png'
+import ally from './assets/ally.webp'
+import barklays from './assets/barklays.png'
+import dutch from './assets/dutch.jpg'
 function StartTransfer() {
   const {user , balance , beneficiaries} = useAuth()
   const navigate = useNavigate()
@@ -141,39 +150,39 @@ const banks = [
   { 
     name: "Regions Bank", 
     country: "USA",
-    logo: ""
+    logo: regions
   },
   { 
     name: "KeyBank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/key.com"
+    logo: key
   },
   { 
     name: "Citizens Bank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/citizensbank.com"
+    logo: citizens
   },
   { 
     name: "M&T Bank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/mtb.com"
+    logo: mt
   },
   { 
     name: "Synchrony Bank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/synchrony.com"
+    logo: sync
   },
   { 
     name: "Ally Bank", 
     country: "USA",
-    logo: "https://logo.clearbit.com/ally.com"
+    logo: ally
   },
 
   // Foreign Banks
   { 
     name: "Barclays", 
     country: "UK",
-    logo: "https://logo.clearbit.com/barclays.com"
+    logo: barklays
   },
   { 
     name: "Santander", 
@@ -183,12 +192,12 @@ const banks = [
   { 
     name: "Deutsche Bank", 
     country: "Germany",
-    logo: "https://logo.clearbit.com/db.com"
+    logo: dutch
   },
   { 
     name: "ING Bank", 
     country: "Netherlands",
-    logo: "https://logo.clearbit.com/ing.com"
+    logo: ing
   },
   { 
     name: "Standard Chartered", 
@@ -198,7 +207,7 @@ const banks = [
   { 
     name: "Royal Bank of Canada", 
     country: "Canada",
-    logo: "https://logo.clearbit.com/rbc.com"
+    logo: royal
   },
   { 
     name: "Scotiabank", 
