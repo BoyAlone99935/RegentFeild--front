@@ -18,6 +18,7 @@
 
 .settings-header span {
   font-weight: 600;
+  color: #ccc;
 }
 
 .settings-section {
@@ -39,6 +40,12 @@
   margin-bottom: 0.5rem;
 }
 
+.setting svg {
+  background-color: #151b24;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
 .setting {
   display: flex;
   align-items: center;
@@ -46,7 +53,7 @@
 }
 
 .setting span {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
@@ -58,4 +65,39 @@
 .others {
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+
+.toggle {
+  width: 45px;
+  height: 26px;
+  background: #ccc;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.toggle.on {
+  background:  rgb(255, 187, 0); 
+}
+
+.toggle-circle {
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.25s ease;
+}
+
+.toggle.on .toggle-circle {
+  transform: translateX(22px);
+}
+
+
+.others {
+  color: #ccc;
 }
