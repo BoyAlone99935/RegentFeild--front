@@ -1,14 +1,14 @@
 import { ArrowLeft, ChevronRight, EyeClosed, Lock, ShieldAlert, Trash2Icon, Bell } from "lucide-react";
-import { FaMobile } from "react-icons/fa";
+import { FaLastfmSquare, FaMobile } from "react-icons/fa";
 import './styles/Settings.css';
 import { useState } from "react";
 function Settings() {
-    const [checked, setChecked] = useState(false);
+   const [on, setOn] = useState(false);
 
-    const handleToggle = () => {
-      setChecked(prev => !prev);
-      onToggle?.(!checked);
-    };
+  const toggle = () => {
+    setOn(prev => !prev);
+    onChange?.(!on);
+  };
   return (
     <div className="mobile-wrapper">
       <div className='settings-container'>
@@ -38,12 +38,14 @@ function Settings() {
               <EyeClosed className="arrowLeft" size={15}/>
               <span>Hide Balance</span>
             </div>
-               <div
-                className={`toggle ${checked ? "on" : ""}`}
-                onClick={handleToggle}
+                <button
+                type="button"
+                onClick={toggle}
+                className={`toggle ${on ? "active" : ""}`}
+                aria-pressed={on}
               >
-                <div className="toggle-circle" />
-              </div>
+                <span className="knob" />
+              </button>
           </div>
         </div>
         <div className="settings-section">
