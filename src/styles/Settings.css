@@ -118,3 +118,89 @@
     0 2px 4px rgba(0,0,0,.22),
     0 4px 10px rgba(0,0,0,.14);
 }
+
+
+.card-gen {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.card-gen img {
+  width: 250px;
+}
+
+.atm {
+  text-align: center;
+  background-color: rgba(255, 217, 0, 0.151);
+  border-radius: 15px;
+}
+
+.oga-cont h2 {
+  font-size: 1.1rem;
+}
+
+.inside-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.get {
+  font-size: 0.9rem;
+  color: rgba(128, 128, 128, 0.53);
+
+}
+
+
+.card-card-cont {
+  display: flex;
+  align-items: center;
+  gap : 10px;
+}
+
+.card-card-cont div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+.card-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 28px;
+  stroke-width: 1.8;
+  color: rgb(255, 183, 0);
+  padding: 0.5rem;
+  background-color: #151b24;
+  border-radius: 10px;
+}
+
+
+.ansss {
+  font-size: 0.8rem;
+  color:rgba(128, 128, 128, 0.53) ;
+  font-weight: 600;
+}
+
+.qstt {
+  font-size: 0.9rem;
+}
+
+
+.order-card {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.8rem 1rem;
+  background-color: rgb(255, 183, 0) ;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins';
+}
