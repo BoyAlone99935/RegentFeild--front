@@ -4,7 +4,6 @@ import megaphone from '../src/assets/cent.png'
 import crypto from '../src/assets/crypto.png'
 import bull from '../src/assets/bulls.png'
 import warning from './assets/warn.png'
-import { useAuth } from './AuthContext'
 import { formatDate1 } from './FormattDate'
 import Spinner from './Spinner'
 import {
@@ -31,7 +30,11 @@ import { useNavigate } from 'react-router-dom'
 import './styles/Dashboard.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
-function DashHome() {
+import { useAuth } from './AuthContext'
+function DashHome({setTabb}) {
+  const {on} = useAuth()
+  console.log(on)
+  console.log(on)
   const [tab , setTab] = useState("month")
   const [open , setOpen] = useState(true)
   const [showCancelModal , setShowCancelModal ] = useState(false)
@@ -39,6 +42,7 @@ function DashHome() {
   useEffect(() => {
    console.log('hello people')
    console.log(transactions)
+
   },[])
   
   const navigate = useNavigate()
@@ -58,12 +62,15 @@ function DashHome() {
 
         <div className='amount'>
          {
+          on ? <span className='amount-text'>........</span> :  <>
+          {
           open && <span className='amount-text'>
             ${user ? `${user.AccountBalance.toLocaleString()}.00` : 'loading...'}
           </span>
          }
          {
           open ? <EyeOff size={15} className='icon-btn' onClick={() => setOpen(!open)}/>   :   <Eye size={15} className='icon-btn' onClick={() => setOpen(!open)}/>
+         }</>
          }
         </div>
 
@@ -112,7 +119,7 @@ function DashHome() {
             <p>Recurring</p>
           </div>
 
-          <div className='service-item'>
+          <div className='service-item' onClick={() => setTabb("card")}>
             <CreditCard size={13} />
             <p>Card</p>
           </div>
@@ -122,7 +129,7 @@ function DashHome() {
             <p>TV</p>
           </div>
 
-          <div className='service-item'>
+          <div className='service-item' onClick={() => navigate('/settings')}>
             <Sliders size={13} />
             <p>Settings</p>
           </div>
@@ -139,7 +146,7 @@ function DashHome() {
             <img src={crypto} alt="crypto" />
             <p className='p'>Crypto holdings</p>
            <div style={{display : 'flex', alignItems : 'center', gap : '7px'}}>
-             <span>$23,786.80</span> <p className='highlight2'>+4.3%</p>
+             <span>{on ? '........' : '$23,786.80'}</span> {!on  && <p className='highlight2'>+4.3%</p>}
            </div>
           </div>
         </div>
@@ -149,7 +156,7 @@ function DashHome() {
           <p className='p'>Cashback</p>
           <div>
              <div style={{display : 'flex', alignItems : 'center', gap : '13px'}}>
-             <span>$48.17</span> <p className='highlight2'>+12.4%</p>
+             <span>{on ? '........' : '$48.17'}</span>  {!on &&  <p className='highlight2'>+12.4%</p>}
            </div>
           </div>
         </div>
@@ -222,14 +229,14 @@ function DashHome() {
         <ArrowDown className='crediti' size={'13px'}/>
         <span className='creditii'>Money In</span>
       </div>
-       <span className='figure'>${tab === 'month' ? user.inMonth.toLocaleString() : user.inWeek.toLocaleString()}</span>
+       <span className='figure'>{open ? '........' : `${tab === 'month' ? user.inMonth.toLocaleString() : user.inWeek.toLocaleString()}`}</span>
       </div>
       <div className='out'>
         <div style={{display : 'flex' , alignItems : 'center' , gap : '6px' , marginBottom : '0.6rem'}}>
         <ArrowUp className='debiti' size={'13px'}/>
         <span className='debitii'>Money Out</span>
       </div>
-      <span className='figure'>${tab === 'month' ? user.outMonth.toLocaleString() : user.outWeek.toLocaleString()}</span>
+      <span className='figure'>{open ? '........' : `${tab === 'month' ? user.inMonth.toLocaleString() : user.outWeek.toLocaleString()}`}</span>
       </div>
     </div>
   </div>

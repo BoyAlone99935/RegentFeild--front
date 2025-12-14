@@ -31,7 +31,7 @@ export default function AccountLimits() {
     dailyDebit: 1000000,
   },
   }
-const kycLevel = user?.kycLevel ?? 2;
+const kycLevel = user?.kycLevel ?? 3;
 const limits = ACCOUNT_LIMITS[kycLevel];
 const formatUSD = (amount) =>
   new Intl.NumberFormat("en-US", {
@@ -39,7 +39,8 @@ const formatUSD = (amount) =>
     currency: "USD",
   }).format(amount);
 
-  if (loading === true) return <LimitsShimmer/>
+   if (loading) return <LimitsShimmer/>;
+
   
   return (
 

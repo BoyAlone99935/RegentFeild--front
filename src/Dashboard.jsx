@@ -14,9 +14,9 @@ function Dashboard() {
   const navigate = useNavigate()
   const renderScreen = () => {
     switch (activeTab) {
-      case 'home': return <DashHome />
+      case 'home': return <DashHome setTabb = {setActiveTab}/>
       case 'card': return <Card />
-      case 'service': return <Service />
+      case 'service': return <Service setTabb = {setActiveTab}/>
       case 'notification': return <Notification />
       default: return <DashHome />
     }

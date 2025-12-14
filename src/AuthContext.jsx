@@ -14,7 +14,13 @@ const [notifications , setNotification] = useState([])
 const [beneficiaries , setBeneficiaries] = useState([])
 const [balance , setBalance] = useState()
 const [token, setToken] = useState(localStorage.getItem("token") || "");
+  const [on, setOn] = useState(() => {
+    return JSON.parse(localStorage.getItem("on")) ?? false;
+  });
 
+  useEffect(() => {
+    localStorage.setItem("on", JSON.stringify(on));
+  }, [on]);
 
 useEffect(() => {
 if (!token) return
@@ -146,7 +152,9 @@ return (
     refreshTransactions,
     refreshNotifications,
     beneficiaries,
-    refreshBeneficiary
+    refreshBeneficiary,
+    on,
+    setOn
   }}>
    {children} 
   </AuthContext.Provider>

@@ -225,7 +225,7 @@
 }
 
 .limits-header h1 {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   flex: 1;
   text-align: center;
@@ -245,7 +245,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 13px;
+  font-size: 0.8rem;
   color: #cbd5e1;
 }
 
@@ -253,6 +253,7 @@
   color: #fbbf24;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.8rem;
 }
 
 /* KYC Progress Bar */
@@ -286,8 +287,8 @@
 }
 
 .step-circle {
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #e5e7eb;
   display: flex;
@@ -309,15 +310,14 @@
 
 /* Upgraded Limits */
 .upgraded-section h3 {
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 0.9rem; 
   color: #e2e8f0;
 }
 
 .limits-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 10px;
 }
 
 .limit-box {
@@ -329,13 +329,13 @@
 }
 
 .limit-box p {
-  font-size: 14px;
+  font-size: 0.8rem;
   color: #94a3b8;
   margin: 8px 0 4px;
 }
 
 .limit-box strong {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: white;
   font-family: 'Inter';
@@ -363,44 +363,40 @@
   color: white;
 }
 
-/* Dark shimmer base */
-.shimmer * {
+
+
+
+
+.page-shimmer.dark {
+  min-height: 100vh;
+  padding: 24px;
+  background: #0b0f1a; /* deep dark background */
+}
+
+/* Shared shimmer animation */
+.page-shimmer.dark div {
   background: linear-gradient(
     90deg,
-    #1f2933 25%,
-    #2d3748 37%,
-    #1f2933 63%
+    #161b2e 25%,
+    #1f2a44 37%,
+    #161b2e 63%
   );
   background-size: 400% 100%;
   animation: shimmer 1.4s ease infinite;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
-/* Title */
-.shimmer-title {
-  width: 220px;
-  height: 18px;
-  margin-bottom: 20px;
+/* Header */
+.shimmer-header {
+  width: 240px;
+  height: 28px;
+  margin-bottom: 28px;
 }
 
-/* Box */
-.shimmer-box {
-  padding: 16px;
-}
-
-/* Lines */
-.shimmer-line {
-  margin-bottom: 12px;
-}
-
-.shimmer-line.small {
-  width: 60%;
-  height: 12px;
-}
-
-.shimmer-line.large {
-  width: 40%;
-  height: 18px;
+/* Cards */
+.shimmer-card {
+  height: 150px;
+  margin-bottom: 22px;
 }
 
 /* Animation */
