@@ -102,7 +102,7 @@ function DashHome() {
             <p>Network</p>
           </div>
 
-          <div className='service-item'>
+          <div className='service-item' onClick={() => navigate('/limit')}>
             <Gauge size={13} />
             <p>Limit</p>
           </div>

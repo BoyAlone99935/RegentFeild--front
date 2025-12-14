@@ -21,6 +21,7 @@ import RecentTransactions from './RecentTransactions'
 import TransactionDetails from './TransactionDetails'
 import NotificationDet from './NotificationDet'
 import Settings from './Settings'
+import AccountLimits from './Limit'
 function App() {
  const [loading , setLoading] = useState(true)
  useEffect(() => {
@@ -55,6 +56,7 @@ function App() {
       <Route path ='/transaction-details' element = {<TransactionDetails/>}/>
       <Route path ='/notification-details' element = {<NotificationDet/>}/>
       <Route path ='/settings' element = {<Settings/>}/>
+      <Route path ='/limit' element = {<AccountLimits/>}/>
      </Routes>
      </>
      }
