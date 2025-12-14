@@ -31,7 +31,7 @@ export default function AccountLimits() {
     dailyDebit: 1000000,
   },
   }
-const kycLevel = user?.kycLevel ?? 1;
+const kycLevel = user?.kycLevel ?? 2;
 const limits = ACCOUNT_LIMITS[kycLevel];
 const formatUSD = (amount) =>
   new Intl.NumberFormat("en-US", {
@@ -46,7 +46,7 @@ const formatUSD = (amount) =>
     <div className="limits-container">
       {/* Header */}
       <div className="limits-header">
-        <ArrowLeft size={24} />
+        <ArrowLeft size={17} />
         <h1>Account Limits</h1>
       </div>
 
@@ -77,7 +77,7 @@ const formatUSD = (amount) =>
               } ${kycLevel === level ? "active" : ""}`}
             >
               <div className="step-circle">
-                {kycLevel > level ? "✓" : `Lvl ${level}`}
+                {kycLevel > level ? "✓" : `${level}`}
               </div>
             </div>
           ))}
