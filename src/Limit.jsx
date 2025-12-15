@@ -5,7 +5,9 @@ import LimitsShimmer from "./Shimmer";
 import { useState } from "react";
 import { useAuth } from "./AuthContext";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export default function AccountLimits() {
+  const navigate = useNavigate()
   const [loading , setLoading] = useState(true)
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
@@ -47,7 +49,7 @@ const formatUSD = (amount) =>
     <div className="limits-container">
       {/* Header */}
       <div className="limits-header">
-        <ArrowLeft size={17} />
+        <ArrowLeft size={17} onClick={() => navigate(-1)}/>
         <h1>Account Limits</h1>
       </div>
 

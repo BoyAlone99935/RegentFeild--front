@@ -23,12 +23,15 @@ import {
   Code2,
   ShieldCheck,
   TrendingUp,
+  CoinsIcon,
 } from "lucide-react"
 import { useNavigate } from 'react-router-dom'
 import { FaBookOpen, FaMobileAlt } from 'react-icons/fa'
 import { Search } from "lucide-react";
+import { useAuth } from './AuthContext';
 function Service({setTabb}) {
   const navigate = useNavigate()
+  const {logOut} = useAuth()
   return (
     <div>
       
@@ -92,7 +95,7 @@ function Service({setTabb}) {
             </div>
             <div className='service-item'>
               <TrendingUp size={13} />
-              <p>Investments</p>
+              <p>Stocks</p>
             </div>
         </div>
 
@@ -106,8 +109,9 @@ function Service({setTabb}) {
         <span>Lifestyle</span>
         <div className='service-list'>
           <div className='service-item'>
-            <WalletCardsIcon size={13} />
-            <p>Savings</p>
+            <CoinsIcon size={13} />
+            <p>Loan
+            </p>
           </div>
         </div>
         
@@ -128,7 +132,10 @@ function Service({setTabb}) {
             <p>Statement</p>
           </div>
 
-          <div className='service-item'>
+          <div className='service-item' onClick={() => {
+            logOut()
+            navigate('/login')
+          }}>
             <LogOut size={13} color='red'/>
             <p style={{color: 'red'}}>Logout</p>
           </div>

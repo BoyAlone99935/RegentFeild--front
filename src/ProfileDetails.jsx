@@ -6,7 +6,7 @@ import { FaGreaterThan } from 'react-icons/fa'
 import { useAuth } from './AuthContext'
 import { useNavigate } from 'react-router-dom'
 function ProfileDetails() {
-  const {user} = useAuth()
+  const {user , logOut} = useAuth()
   const navigate = useNavigate()
   return (
     <div className='me-container' >
@@ -49,7 +49,7 @@ function ProfileDetails() {
           </div>
           <ChevronRight size={'15px'}  color='rgb(236, 167, 5)'/>
         </div>
-         <div className='action' onClick={() => navigate('./support')}>
+         <div className='action' onClick={() => navigate('/support')}>
           <div>
             <HelpCircle size={'15px'}/>
             <span>Support</span>
@@ -63,7 +63,10 @@ function ProfileDetails() {
           </div>
           <ChevronRight size={'15px'}  color='rgb(236, 167, 5)'/>
         </div>
-         <div className='action'>
+         <div className='action' onClick={() => {
+          logOut()
+          navigate('/login')
+         }}>
           <div>
             <LogOut size={'15px'} color='rgba(240, 13, 13, 1)'/>
             <span>Log Out</span>

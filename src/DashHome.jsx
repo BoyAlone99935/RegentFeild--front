@@ -229,14 +229,14 @@ function DashHome({setTabb}) {
         <ArrowDown className='crediti' size={'13px'}/>
         <span className='creditii'>Money In</span>
       </div>
-       <span className='figure'>{open ? '........' : `${tab === 'month' ? user.inMonth.toLocaleString() : user.inWeek.toLocaleString()}`}</span>
+       <span className='figure'>{on ? '........' : `${tab === 'month' ? user.inMonth.toLocaleString() : user.inWeek.toLocaleString()}`}</span>
       </div>
       <div className='out'>
         <div style={{display : 'flex' , alignItems : 'center' , gap : '6px' , marginBottom : '0.6rem'}}>
         <ArrowUp className='debiti' size={'13px'}/>
         <span className='debitii'>Money Out</span>
       </div>
-      <span className='figure'>{open ? '........' : `${tab === 'month' ? user.inMonth.toLocaleString() : user.outWeek.toLocaleString()}`}</span>
+      <span className='figure'>{on ? '........' : `${tab === 'month' ? user.inMonth.toLocaleString() : user.outWeek.toLocaleString()}`}</span>
       </div>
     </div>
   </div>

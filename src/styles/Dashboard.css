@@ -539,6 +539,10 @@
   border-radius: 7px;
 }
 
+.tawk-button-circle {
+  display: none !important;
+}
+
 .acct-details .no {
   font-size: 1.1rem;
   font-family: 'Inter';
@@ -635,4 +639,84 @@
   transform: translateY(-50%);
   color: #888;
   pointer-events: none;
+}
+
+
+.dash-shimmer {
+  background: #0d0f14;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+/* Base shimmer */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #1a1d24 25%,
+    #242835 37%,
+    #1a1d24 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* Header */
+.shimmer-header {
+  height: 48px;
+  width: 60%;
+}
+
+/* Balance card */
+.shimmer-balance {
+  height: 110px;
+  width: 100%;
+}
+
+/* Rows */
+.shimmer-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Actions */
+.shimmer-action {
+  flex: 1;
+  height: 60px;
+  border-radius: 14px;
+}
+
+/* Stats */
+.shimmer-stat {
+  flex: 1;
+  height: 80px;
+}
+
+/* Title */
+.shimmer-title {
+  width: 40%;
+  height: 20px;
+}
+
+/* Transactions */
+.shimmer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shimmer-transaction {
+  height: 54px;
+  border-radius: 10px;
 }

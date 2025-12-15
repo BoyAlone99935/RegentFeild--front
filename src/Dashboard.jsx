@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import pf from '../src/assets/img2.jpg'
 import './styles/Dashboard.css'
-import { FaAppStore, FaCreditCard, FaHeadset, FaRegBell, FaHome } from 'react-icons/fa'
+import { FaAppStore, FaCreditCard, FaHeadset, FaRegBell, FaHome, FaWrench, FaPuzzlePiece, FaChartLine, FaChartArea, FaWindows, FaWindowClose } from 'react-icons/fa'
 import DashHome from './DashHome'
 import Notification from './Notification'
 import Service from './Service'
@@ -9,6 +9,7 @@ import Card from './Card'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from './AuthContext'
 import Spinner from './Spinner'
+import DashboardShimmer from './DashboardShimmer'
 function Dashboard() {
   const [activeTab, setActiveTab] = useState('home')
   const navigate = useNavigate()
@@ -24,7 +25,7 @@ function Dashboard() {
   const {user} = useAuth()
   console.log(user)
 
-  if (!user) return <Spinner />;
+  if (!user) return <DashboardShimmer/>;
   return (
     <>
     <div className='mobile-wrapper'>
@@ -68,7 +69,7 @@ function Dashboard() {
           className={activeTab === 'service' ? 'tab active' : 'tab'} 
           onClick={() => setActiveTab('service')}
         >
-          <FaAppStore />
+          <FaWindows/>
           <span>Services</span>
         </button>
 

@@ -129,6 +129,10 @@ useEffect(() => {
   
   setBeneficiaries(res.data.AllBeneficiaries);
  }
+
+ const logOut = () => {
+  localStorage.removeItem('token')
+ }
 return (
 
   <AuthContext.Provider value={{
@@ -154,7 +158,8 @@ return (
     beneficiaries,
     refreshBeneficiary,
     on,
-    setOn
+    setOn,
+    logOut
   }}>
    {children} 
   </AuthContext.Provider>
